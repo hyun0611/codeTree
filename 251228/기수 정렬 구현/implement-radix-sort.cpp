@@ -20,11 +20,12 @@ void radix_sort(vector<int>& arr, int k){
        for(int i=0;i<10;i++){
             for(int j=0;j < arr_new[i].size();j++){ //.size만큼만 돌아서 값있는곳만 탐색
                 store_arr.push_back(arr_new[i][j]); //자릿수 정렬된 숫자들을 다시 일차원 vector에 삽입
-        }
-        arr = store_arr; //복사
-        exp*=10; //다음 자릿수
+            }
        }
+       arr = store_arr; //복사
+       exp*=10; //다음 자릿수
     }
+    
 }
 
 int main() {
